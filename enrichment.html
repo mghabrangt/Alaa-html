@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Enrichment - Beyond the Cage</title>
+<style>
+  :root {
+    --bg: #f7f3ee;
+    --paper: #fbf8f3;
+    --card: #ffffff;
+    --text: #2f3a35;
+    --muted: #6e776f;
+    --line: #e3ddd2;
+    --accent: #7ca08d;
+    --accent-2: #d4b96e;
+    --shadow: 0 12px 30px rgba(0,0,0,.06);
+    --radius: 22px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(251,248,243,.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 18px; padding: 14px 0;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 12px; font-size: 1.8rem; font-weight: 700;
+  }
+  .brand-mark {
+    width: 138px;
+    display: grid; place-items: center;
+  }
+  .brand-mark img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .menu {
+    display: flex; gap: 18px; flex-wrap: wrap; font-family: Arial, sans-serif; font-size: .95rem;
+  }
+  .menu a {
+    color: var(--text); text-decoration: none; padding-bottom: 3px; border-bottom: 2px solid transparent;
+  }
+  .menu a:hover { border-color: var(--accent); }
+  section { padding: 70px 0; }
+  h1, h2, h3 { line-height: 1.15; margin: 0 0 16px; }
+  h1 { font-size: clamp(2.4rem, 5vw, 4.1rem); font-style: oblique; }
+  h2 { font-size: clamp(2rem, 3vw, 3rem);}
+  h3 { font-size: 1.5rem; margin-top: 28px; }
+  p { margin: 0 0 14px; font-size: 1.07rem; }
+  .muted { color: var(--muted); padding-top: 40px;text-align: center;}
+  .content-section {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .content-section h2 {
+    color: var(--accent);
+    margin-top: 48px;
+    margin-bottom: 20px;
+  }
+  .stripe:nth-of-type(4n+1) {
+    background: #ffffff;
+  }
+  .stripe:nth-of-type(4n+2) {
+    background: linear-gradient(180deg, #ffffff 0%, #F5EDE3 100%);
+  }
+  .stripe:nth-of-type(4n+3) {
+    background: linear-gradient(180deg, #F5EDE3 0%, #ffffff 100%);
+  }
+  .stripe:nth-of-type(4n+4) {
+    background: #ffffff;
+  }
+  .content-section h3 {
+    color: var(--text);
+    margin-top: 36px;
+    margin-bottom: 16px;
+  }
+  .content-section ul {
+    margin: 0 0 20px 20px;
+  }
+  .content-section li {
+    margin-bottom: 8px;
+  }
+  footer {
+    padding: 55px 0 25px; color: var(--muted);
+    background-image: url('images/home/footer_background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .footer-box {
+    padding: 32px; border-radius: 26px; background: rgba(255,255,255,.5);
+    border: 4px solid #f7f3ee; box-shadow: 0px -20px 30px rgba(0, 0, 0, .06); text-align: center;
+  }
+  .footer-box .muted:last-of-type {
+    margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.3);
+  }
+  footer > .wrap > .muted {
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <div class="brand-mark">
+        <img src="images/home/logo.png" alt="Beyond the Cage Logo" />
+      </div>
+    </div>
+    <nav class="menu">
+      <a href="beyond_the_cage_simple_website.html">Home</a>
+      <a href="beyond_the_cage_simple_website.html#bird-types">Bird Types</a>
+      <a href="nutrition.html">Nutrition</a>
+      <a href="enrichment.html">Enrichment</a>
+      <a href="wing_clipping.html">Wing Clipping</a>
+      <a href="cage_setup.html">Cage Setup</a>
+      <a href="common_mistakes.html">Common Mistakes</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <div class="content-section">
+        <h1>Enrichment</h1>
+
+        <p>Birds are highly intelligent and active animals. In the wild, they spend most of their day flying, exploring, searching for food, and interacting with their flock.</p>
+
+        <p>When birds live in captivity, they rely on their owners to provide activities that keep them physically active and mentally stimulated. This is called enrichment.</p>
+
+        <p>Without proper enrichment, birds can become bored, stressed, and unhappy. Over time, boredom can lead to serious behavioral problems such as feather plucking, screaming, aggression, or depression.</p>
+
+        <p>Providing enrichment helps birds stay healthy, curious, and mentally engaged.</p>
+
+        <h2>Why Enrichment Is Important</h2>
+
+        <p>In nature, birds rarely sit still for long periods of time. They fly long distances, climb branches, search for food, and explore their environment throughout the day.</p>
+
+        <p>Captive birds often live in cages where they cannot move or explore as freely as they would in the wild. Even if a cage is large, it cannot replace the natural environment birds evolved to live in.</p>
+
+        <p>Because of this, bird owners must actively provide activities that allow birds to express their natural behaviors.</p>
+
+        <p>Enrichment allows birds to:</p>
+
+        <ul>
+          <li>stay physically active</li>
+          <li>stay mentally stimulated</li>
+          <li>reduce stress and boredom</li>
+          <li>express natural instincts like climbing, chewing, and foraging</li>
+          <li>build stronger bonds with their owners</li>
+        </ul>
+
+        <p>A bird that receives proper enrichment is usually happier, healthier, and more confident.</p>
+
+        <h2>Out-of-Cage Time</h2>
+
+        <p>Birds should not spend their entire lives inside a cage.</p>
+
+        <p>Even birds that have large cages still need daily out-of-cage time to stretch their wings, explore their surroundings, and interact with their owners.</p>
+
+        <p>Allowing birds to come out of their cage safely gives them the opportunity to:</p>
+
+        <ul>
+          <li>fly or exercise their wings</li>
+          <li>explore new spaces</li>
+          <li>climb and move around</li>
+          <li>interact with their owner</li>
+        </ul>
+
+        <p>Birds that are never allowed outside their cage may become frustrated or develop behavioral problems.</p>
+
+        <p>The cage should be seen as a safe resting place, not a permanent prison.</p>
+
+        <h2>Toys and Mental Stimulation</h2>
+
+        <p>Bird toys are an important part of enrichment.</p>
+
+        <p>In the wild, birds constantly interact with their environment. They chew branches, explore objects, and manipulate materials with their beaks and feet.</p>
+
+        <p>Providing toys allows birds to continue these natural behaviors.</p>
+
+        <p>Common types of bird toys include:</p>
+
+        <ul>
+          <li>shredding toys</li>
+          <li>wooden chew toys</li>
+          <li>puzzle toys</li>
+          <li>bells and interactive toys</li>
+          <li>climbing ropes and ladders</li>
+        </ul>
+
+        <p>Toys should be rotated regularly so the bird does not become bored with the same objects.</p>
+
+        <p>It is also important to choose safe toys made from bird-safe materials.</p>
+
+        <h2>Foraging Activities</h2>
+
+        <p>In nature, birds spend a large part of their day searching for food.</p>
+
+        <p>Pet birds, however, often receive their food in a bowl where it requires no effort to obtain. While convenient, this removes an important natural behavior.</p>
+
+        <p>Foraging toys and activities encourage birds to work for their food, which provides mental stimulation and prevents boredom.</p>
+
+        <p>Examples of foraging activities include:</p>
+
+        <ul>
+          <li>hiding food inside toys</li>
+          <li>wrapping treats in paper for birds to shred</li>
+          <li>placing food in puzzle feeders</li>
+          <li>hiding small pieces of food around their play area</li>
+        </ul>
+
+        <p>Foraging encourages birds to think, explore, and stay engaged with their environment.</p>
+
+        <h2>Climbing and Movement</h2>
+
+        <p>Birds are natural climbers.</p>
+
+        <p>In the wild, they move between branches, climb trees, and explore their surroundings constantly.</p>
+
+        <p>Providing climbing opportunities helps birds stay active and exercise their muscles.</p>
+
+        <p>This can include:</p>
+
+        <ul>
+          <li>rope perches</li>
+          <li>ladders</li>
+          <li>climbing nets</li>
+          <li>play stands outside the cage</li>
+        </ul>
+
+        <p>Movement and climbing are important for both physical health and mental stimulation.</p>
+
+        <h2>Natural Perches</h2>
+
+        <p>Perches are where birds spend most of their time, so choosing the right perches is important.</p>
+
+        <p>Natural wood perches are usually better than smooth plastic dowel perches because they provide different textures and help exercise the bird's feet.</p>
+
+        <p>Different perch sizes and textures allow birds to move their feet naturally and stay comfortable.</p>
+
+        <p>Using a variety of natural perches can help prevent foot problems and make the cage environment more interesting.</p>
+
+        <h2>Social Interaction</h2>
+
+        <p>Birds are social animals.</p>
+
+        <p>In the wild, they live in flocks and interact with other birds throughout the day. Because of this, many companion birds need daily social interaction.</p>
+
+        <p>This can include:</p>
+
+        <ul>
+          <li>talking to your bird</li>
+          <li>training sessions</li>
+          <li>playing games</li>
+          <li>allowing the bird to sit with you while you spend time together</li>
+        </ul>
+
+        <p>Spending time with your bird helps strengthen the bond between bird and owner and provides important mental stimulation.</p>
+
+        <h2>Rotating Toys and Activities</h2>
+
+        <p>Birds can become bored if they see the same toys every day.</p>
+
+        <p>Rotating toys and changing the cage setup occasionally helps keep the environment interesting.</p>
+
+        <p>Even small changes, such as adding a new toy or moving perches to different positions, can encourage birds to explore and stay curious.</p>
+
+        <p>Keeping the environment fresh and engaging helps prevent boredom.</p>
+
+        <h2>Understanding Your Bird's Personality</h2>
+
+        <p>Every bird has a different personality.</p>
+
+        <p>Some birds love exploring new toys and activities, while others may be more cautious and prefer familiar environments.</p>
+
+        <p>Bird owners should observe their bird's behavior and learn what types of enrichment they enjoy most.</p>
+
+        <p>Providing a variety of activities allows birds to choose what they like and stay mentally engaged.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-box">
+      <h2>Beyond the Cage</h2>
+      <p>Educating responsible bird ownership and promoting proper care for companion birds.</p>
+      <p><strong>Email:</strong> <a href="mailto:beyondthecage.contact@gmail.com">beyondthecage.contact@gmail.com</a></p>
+      <p><strong>If you have questions about bird care or suggestions for improving this website, feel free to reach out.</strong></p>
+      <p class="muted">The information on this website is for educational purposes only and is not a substitute for professional veterinary advice. Always consult an avian veterinarian for medical concerns regarding your bird.</p>
+    </div>
+          <p class="muted">© 2026 Beyond the Cage. All rights reserved.</p>
+
+  </div>
+</footer>
+</body>
+</html>

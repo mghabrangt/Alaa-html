@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nutrition - Beyond the Cage</title>
+<style>
+  :root {
+    --bg: #f7f3ee;
+    --paper: #fbf8f3;
+    --card: #ffffff;
+    --text: #2f3a35;
+    --muted: #6e776f;
+    --line: #e3ddd2;
+    --accent: #7ca08d;
+    --accent-2: #d4b96e;
+    --shadow: 0 12px 30px rgba(0,0,0,.06);
+    --radius: 22px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(251,248,243,.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 18px; padding: 14px 0;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 12px; font-size: 1.8rem; font-weight: 700;
+  }
+  .brand-mark {
+    width: 138px;
+    display: grid; place-items: center;
+  }
+  .brand-mark img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .menu {
+    display: flex; gap: 18px; flex-wrap: wrap; font-family: Arial, sans-serif; font-size: .95rem;
+  }
+  .menu a {
+    color: var(--text); text-decoration: none; padding-bottom: 3px; border-bottom: 2px solid transparent;
+  }
+  .menu a:hover { border-color: var(--accent); }
+  section { padding: 70px 0; }
+  h1, h2, h3 { line-height: 1.15; margin: 0 0 16px; }
+  h1 { font-size: clamp(2.4rem, 5vw, 4.1rem); font-style: oblique; }
+  h2 { font-size: clamp(2rem, 3vw, 3rem);}
+  h3 { font-size: 1.5rem; margin-top: 28px; }
+  p { margin: 0 0 14px; font-size: 1.07rem; }
+  .muted { color: var(--muted); padding-top: 40px;text-align: center;}
+  .content-section {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .content-section h2 {
+    color: var(--accent);
+    margin-top: 48px;
+    margin-bottom: 10px;
+  }
+  .stripe:nth-of-type(4n+1) {
+    background: #ffffff;
+  }
+  .stripe:nth-of-type(4n+2) {
+    background: linear-gradient(180deg, #ffffff 0%, #F5EDE3 100%);
+  }
+  .stripe:nth-of-type(4n+3) {
+    background: linear-gradient(180deg, #F5EDE3 0%, #ffffff 100%);
+  }
+  .stripe:nth-of-type(4n+4) {
+    background: #ffffff;
+  }
+  .content-section h2:nth-of-type(4n+1) {
+    background: #ffffff;
+  }
+  .content-section h2:nth-of-type(4n+2) {
+    background: linear-gradient(135deg, #ffffff 0%, #F5EDE3 100%);
+  }
+  .content-section h2:nth-of-type(4n+3) {
+    background: linear-gradient(135deg, #F5EDE3 0%, #ffffff 100%);
+  }
+  .content-section h2:nth-of-type(4n+4) {
+    background: #ffffff;
+  }
+  .content-section h3 {
+    color: var(--text);
+    margin-top: 36px;
+    margin-bottom: 16px;
+  }
+  .content-section ul {
+    margin: 0 0 20px 20px;
+  }
+  .content-section li {
+    margin-bottom: 8px;
+  }
+  footer {
+    padding: 55px 0 25px; color: var(--muted);
+    background-image: url('images/home/footer_background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .footer-box {
+    padding: 32px; border-radius: 26px; background: rgba(255,255,255,.5);
+    border: 4px solid #f7f3ee; box-shadow: 0px -20px 30px rgba(0, 0, 0, .06); text-align: center;
+  }
+  .footer-box .muted:last-of-type {
+    margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.3);
+  }
+  footer > .wrap > .muted {
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <div class="brand-mark">
+        <img src="images/home/logo.png" alt="Beyond the Cage Logo" />
+      </div>
+    </div>
+    <nav class="menu">
+      <a href="beyond_the_cage_simple_website.html">Home</a>
+      <a href="beyond_the_cage_simple_website.html#bird-types">Bird Types</a>
+      <a href="nutrition.html">Nutrition</a>
+      <a href="enrichment.html">Enrichment</a>
+      <a href="wing_clipping.html">Wing Clipping</a>
+      <a href="cage_setup.html">Cage Setup</a>
+      <a href="common_mistakes.html">Common Mistakes</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="stripe">
+    <div class="wrap">
+      <div class="content-section">
+        <h1>Nutrition</h1>
+
+        <p>Feeding your bird properly is one of the most important responsibilities of bird ownership. A balanced diet helps birds stay healthy, active, and live longer lives.</p>
+
+        <p>Many birds suffer from serious health problems simply because they are fed the wrong foods. This guide explains what birds should eat, what foods to avoid, and how to provide a balanced diet for different species.</p>
+
+        <h2>Why Bird Nutrition Matters</h2>
+
+        <p>Proper nutrition is one of the most important parts of keeping a bird healthy. Many birds in captivity suffer from serious health problems simply because they are fed the wrong diet.</p>
+
+        <p>In the wild, birds eat a wide variety of foods such as fruits, vegetables, grains, flowers, and plant materials. However, many birds kept as pets are often fed only seeds. While birds enjoy seeds, a seed-only diet is not healthy because seeds are very high in fat and do not provide all the nutrients birds need.</p>
+
+        <p>Poor nutrition can lead to health problems such as obesity, fatty liver disease, weak feathers, low energy, and a shorter lifespan. Providing a balanced diet helps birds stay healthy, active, and live longer lives.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="stripe">
+    <div class="wrap">
+      <div class="content-section">
+        <h2>The Ideal Bird Diet</h2>
+
+        <p>Most companion birds should eat a balanced diet made up of three main components:</p>
+
+        <ul>
+          <li>Pellets – the main source of nutrition</li>
+          <li>Fresh vegetables and fruits – important daily foods</li>
+          <li>Seeds or treats – small amounts only</li>
+        </ul>
+
+        <p>A healthy diet often looks like this:</p>
+
+        <p>60–70% pellets<br>
+        20–30% fresh vegetables and fruits<br>
+        5–10% seeds or treats</p>
+
+        <p>Pellets are designed to provide balanced vitamins and minerals that birds need to stay healthy, while fresh foods provide natural nutrients and variety.</p>
+
+        <h2>Recommended Pellet Brands</h2>
+
+        <p>There are several pellet brands that bird owners and avian veterinarians often recommend.</p>
+
+        <p>Some trusted pellet brands include:</p>
+
+        <ul>
+          <li>Harrison's Bird Foods</li>
+          <li>Zupreem Natural Pellets</li>
+          <li>Roudybush Pellets</li>
+          <li>TOP's Organic Pellets</li>
+        </ul>
+
+        <p>Harrison's Bird Foods is widely recommended by experienced bird owners and avian veterinarians because it uses organic ingredients and avoids artificial colors and unnecessary additives.</p>
+
+        <p>Many of these products can be found online or through specialty bird supply stores. When choosing pellets, it is important to select the formula that matches your bird's species and age.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="stripe">
+    <div class="wrap">
+      <div class="content-section">
+        <h2>Avoid Artificial Colored Foods</h2>
+
+        <p>Some bird foods contain bright artificial colors that are designed to attract customers. However, these foods often contain artificial dyes and unnecessary ingredients.</p>
+
+        <p>Whenever possible, it is better to choose natural pellets without artificial coloring. Natural foods are usually healthier and closer to what birds should be eating.</p>
+
+        <h2>Fresh Foods for Birds</h2>
+
+        <p>Fresh vegetables and fruits are an important part of a bird's diet.</p>
+
+        <p>Healthy vegetables include:</p>
+
+        <ul>
+          <li>carrots</li>
+          <li>broccoli</li>
+          <li>bell peppers</li>
+          <li>spinach</li>
+          <li>leafy greens</li>
+          <li>squash</li>
+        </ul>
+
+        <p>Healthy fruits include:</p>
+
+        <ul>
+          <li>apples</li>
+          <li>berries</li>
+          <li>mango</li>
+          <li>papaya</li>
+          <li>bananas</li>
+        </ul>
+
+        <p>Fresh foods should always be washed before feeding them to birds.</p>
+
+        <h2>What Is Bird Chop?</h2>
+
+        <p>Many bird owners prepare something called bird chop.</p>
+
+        <p>Bird chop is a mixture of chopped vegetables, grains, and other healthy ingredients combined into one balanced meal. The goal of bird chop is to provide a variety of nutrients in one serving.</p>
+
+        <p>Bird chop can be prepared in larger batches and stored in the freezer. Owners usually freeze portions and then take out a small amount each day to feed their birds.</p>
+
+        <p>Each bird's chop mixture may be slightly different depending on the species and nutritional needs.</p>
+
+        <p>There are many bird owners who share recipes and ideas for bird chop online. For example, bird educator Elle and the Birds often shows how to prepare balanced meals for birds and explains what foods are safe.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="stripe">
+    <div class="wrap">
+      <div class="content-section">
+        <h2>Training Treats</h2>
+
+        <p>Treats can be useful when training birds or building trust.</p>
+
+        <p>One popular treat used during training is millet, which many birds enjoy. Millet should only be used in small amounts as a reward during training sessions, not as a main food.</p>
+
+        <p>Using treats correctly can help birds learn behaviors and become more comfortable interacting with their owners.</p>
+
+        <h2>Maintaining a Healthy Weight</h2>
+
+        <p>Birds should maintain a healthy body weight in order to stay active and healthy.</p>
+
+        <p>Birds that are fed too many seeds or fatty foods can become overweight. Obesity can lead to serious health problems, especially in captive birds that do not fly as much as wild birds.</p>
+
+        <p>Signs of poor nutrition may include:</p>
+
+        <ul>
+          <li>unusual weight gain or weight loss</li>
+          <li>dull or weak feathers</li>
+          <li>low energy</li>
+          <li>changes in droppings</li>
+        </ul>
+
+        <p>Providing a balanced diet and appropriate portion sizes helps keep birds at a healthy weight.</p>
+
+        <h2>Age and Nutrition</h2>
+
+        <p>A bird's nutritional needs can change depending on its age.</p>
+
+        <p>Young birds, adult birds, and older birds may require different diets or pellet formulas. Some pellet brands provide different options depending on the bird's life stage.</p>
+
+        <p>Knowing your bird's approximate age helps you choose the most appropriate diet for their health and development.</p>
+
+        <h2>Nutrition for Larger Parrots</h2>
+
+        <p>Larger parrots such as cockatoos, macaws, Amazon parrots, and African greys often require slightly different diets compared to smaller birds.</p>
+
+        <p>While pellets and vegetables are still important, larger parrots may benefit from a wider variety of foods.</p>
+
+        <p>Their diets may include:</p>
+
+        <ul>
+          <li>high-quality pellets</li>
+          <li>fresh vegetables and leafy greens</li>
+          <li>limited fruits</li>
+          <li>healthy grains such as quinoa or brown rice</li>
+          <li>occasional nuts such as almonds or walnuts</li>
+        </ul>
+
+        <p>Nuts can be a healthy source of fats for large parrots but should only be given in moderation.</p>
+
+        <p>Large parrots are also highly intelligent animals that spend much of their time searching for food in the wild. Because of this, food can sometimes be provided through foraging activities, which encourage birds to work for their meals instead of eating from a bowl.</p>
+
+        <h2>Clean Water and Food Bowls</h2>
+
+        <p>Birds should always have access to fresh, clean water.</p>
+
+        <p>Water bowls should be cleaned and refilled daily because birds often drop food into their water while eating. Dirty water can quickly grow bacteria and become unsafe.</p>
+
+        <p>It is recommended to use stainless steel bowls for both food and water.</p>
+
+        <p>Stainless steel bowls are safer, easier to clean, and do not absorb bacteria. Plastic bowls should be avoided whenever possible because they can scratch easily and may hold bacteria over time.</p>
+
+        <p>Clean bowls and fresh water are an important part of keeping birds healthy.</p>
+
+        <h2>Regular Avian Vet Visits</h2>
+
+        <p>Bird owners should schedule regular visits with an avian veterinarian.</p>
+
+        <p>An avian vet can check the bird's health and help identify potential nutrition problems early.</p>
+
+        <p>Veterinarians may perform tests to determine:</p>
+
+        <ul>
+          <li>the bird's health condition</li>
+          <li>possible allergies or sensitivities</li>
+          <li>the bird's gender</li>
+          <li>overall health and development</li>
+        </ul>
+
+        <p>Regular checkups help ensure that birds receive proper nutrition and care.</p>
+
+        <h2>Foods Birds Should Never Eat</h2>
+
+        <p>Some foods are dangerous or toxic for birds and should never be given to them.</p>
+
+        <p>These include:</p>
+
+        <ul>
+          <li>avocado</li>
+          <li>chocolate</li>
+          <li>caffeine</li>
+          <li>alcohol</li>
+          <li>onions</li>
+          <li>garlic</li>
+          <li>salty foods</li>
+          <li>sugary foods</li>
+        </ul>
+
+        <p>Always research foods before feeding them to birds.</p>
+
+        <h2>Different Birds Have Different Diets</h2>
+
+        <p>Different bird species may require slightly different diets.</p>
+
+        <p>For example:</p>
+
+        <ul>
+          <li>Lorikeets need a nectar-based diet rather than pellets or seeds</li>
+          <li>Canaries and finches often eat specialized seed mixes along with fresh foods</li>
+          <li>Most parrots benefit from pellet-based diets combined with fresh vegetables</li>
+        </ul>
+
+        <p>Understanding your bird's species helps ensure that you provide the correct nutrition.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-box">
+      <h2>Beyond the Cage</h2>
+      <p>Educating responsible bird ownership and promoting proper care for companion birds.</p>
+      <p><strong>Email:</strong> <a href="mailto:beyondthecage.contact@gmail.com">beyondthecage.contact@gmail.com</a></p>
+      <p><strong>If you have questions about bird care or suggestions for improving this website, feel free to reach out.</strong></p>
+      <p class="muted">The information on this website is for educational purposes only and is not a substitute for professional veterinary advice. Always consult an avian veterinarian for medical concerns regarding your bird.</p>
+    </div>
+          <p class="muted">© 2026 Beyond the Cage. All rights reserved.</p>
+
+  </div>
+</footer>
+</body>
+</html>

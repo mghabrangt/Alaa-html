@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wing Clipping - Beyond the Cage</title>
+<style>
+  :root {
+    --bg: #f7f3ee;
+    --paper: #fbf8f3;
+    --card: #ffffff;
+    --text: #2f3a35;
+    --muted: #6e776f;
+    --line: #e3ddd2;
+    --accent: #7ca08d;
+    --accent-2: #d4b96e;
+    --shadow: 0 12px 30px rgba(0,0,0,.06);
+    --radius: 22px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(251,248,243,.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 18px; padding: 14px 0;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 12px; font-size: 1.8rem; font-weight: 700;
+  }
+  .brand-mark {
+    width: 138px;
+    display: grid; place-items: center;
+  }
+  .brand-mark img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .menu {
+    display: flex; gap: 18px; flex-wrap: wrap; font-family: Arial, sans-serif; font-size: .95rem;
+  }
+  .menu a {
+    color: var(--text); text-decoration: none; padding-bottom: 3px; border-bottom: 2px solid transparent;
+  }
+  .menu a:hover { border-color: var(--accent); }
+  section { padding: 70px 0; }
+  h1, h2, h3 { line-height: 1.15; margin: 0 0 16px; }
+  h1 { font-size: clamp(2.4rem, 5vw, 4.1rem); font-style: oblique; }
+  h2 { font-size: clamp(2rem, 3vw, 3rem);}
+  h3 { font-size: 1.5rem; margin-top: 28px; }
+  p { margin: 0 0 14px; font-size: 1.07rem; }
+  .muted { color: var(--muted); padding-top: 40px;text-align: center;}
+  .content-section {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .content-section h2 {
+    color: var(--accent);
+    margin-top: 48px;
+    margin-bottom: 20px;
+  }
+  .stripe:nth-of-type(4n+1) {
+    background: #ffffff;
+  }
+  .stripe:nth-of-type(4n+2) {
+    background: linear-gradient(180deg, #ffffff 0%, #F5EDE3 100%);
+  }
+  .stripe:nth-of-type(4n+3) {
+    background: linear-gradient(180deg, #F5EDE3 0%, #ffffff 100%);
+  }
+  .stripe:nth-of-type(4n+4) {
+    background: #ffffff;
+  }
+  .content-section h3 {
+    color: var(--text);
+    margin-top: 36px;
+    margin-bottom: 16px;
+  }
+  .content-section ul {
+    margin: 0 0 20px 20px;
+  }
+  .content-section li {
+    margin-bottom: 8px;
+  }
+  footer {
+    padding: 55px 0 25px; color: var(--muted);
+    background-image: url('images/home/footer_background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .footer-box {
+    padding: 32px; border-radius: 26px; background: rgba(255,255,255,.5);
+    border: 4px solid #f7f3ee; box-shadow: 0px -20px 30px rgba(0, 0, 0, .06); text-align: center;
+  }
+  .footer-box .muted:last-of-type {
+    margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.3);
+  }
+  footer > .wrap > .muted {
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <div class="brand-mark">
+        <img src="images/home/logo.png" alt="Beyond the Cage Logo" />
+      </div>
+    </div>
+    <nav class="menu">
+      <a href="beyond_the_cage_simple_website.html">Home</a>
+      <a href="beyond_the_cage_simple_website.html#bird-types">Bird Types</a>
+      <a href="nutrition.html">Nutrition</a>
+      <a href="enrichment.html">Enrichment</a>
+      <a href="wing_clipping.html">Wing Clipping</a>
+      <a href="cage_setup.html">Cage Setup</a>
+      <a href="common_mistakes.html">Common Mistakes</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <div class="content-section">
+        <h1>Wing Clipping</h1>
+
+        <p>Birds are naturally designed to fly. Flight is not only how birds move from place to place, but also how they explore their environment, exercise their bodies, and respond to situations around them.</p>
+
+        <p>In captivity, some bird owners choose to clip their bird's wings to prevent them from flying. Wing clipping involves trimming certain flight feathers so that the bird cannot fully fly.</p>
+
+        <p>However, many avian experts and experienced bird owners believe that wing clipping should be avoided whenever possible because flight is a natural and important part of a bird's physical and mental well-being.</p>
+
+        <p>Understanding how flight affects a bird's health can help owners make better decisions about their bird's care.</p>
+
+        <h2>Why Flight Is Important</h2>
+
+        <p>Flying is one of the most natural behaviors for birds.</p>
+
+        <p>In the wild, birds use flight to:</p>
+
+        <ul>
+          <li>travel long distances</li>
+          <li>escape danger</li>
+          <li>search for food</li>
+          <li>explore their environment</li>
+          <li>exercise their muscles</li>
+        </ul>
+
+        <p>Flight is also one of the main ways birds stay physically fit. Flying strengthens a bird's muscles, improves circulation, and helps maintain a healthy weight.</p>
+
+        <p>When birds are unable to fly, they lose an important form of natural exercise.</p>
+
+        <h2>Mental and Emotional Well-Being</h2>
+
+        <p>Flight is not only important for a bird's body but also for its mental health.</p>
+
+        <p>Birds use flight as a way to respond to situations that make them uncomfortable or afraid. In nature, a bird can simply fly away from something that scares it.</p>
+
+        <p>When a bird's wings are clipped, it may lose the ability to escape situations that cause stress. This can sometimes lead to anxiety, frustration, or aggressive behavior.</p>
+
+        <p>Birds that cannot express natural behaviors may also develop problems such as feather plucking, screaming, or other stress-related behaviors.</p>
+
+        <p>Allowing birds to fly helps them feel more confident and secure in their environment.</p>
+
+        <h2>Physical Health and Exercise</h2>
+
+        <p>Flying is one of the best forms of exercise for birds.</p>
+
+        <p>Birds that regularly fly develop strong muscles, good coordination, and better overall physical health.</p>
+
+        <p>When birds are unable to fly, they may become less active and may gain weight more easily. Lack of exercise can contribute to health problems such as obesity or weak muscles.</p>
+
+        <p>Encouraging safe flight inside the home allows birds to stay active and healthy.</p>
+
+        <h2>Safety and Training</h2>
+
+        <p>Some people clip wings because they believe it makes birds easier to control or prevents them from flying away.</p>
+
+        <p>However, many bird owners choose to focus on training and safety instead of wing clipping.</p>
+
+        <p>Birds can learn important skills such as:</p>
+
+        <ul>
+          <li>recall training (flying back when called)</li>
+          <li>stepping up onto a hand</li>
+          <li>returning to their cage or play stand</li>
+        </ul>
+
+        <p>Training helps birds and owners communicate with each other and builds trust.</p>
+
+        <p>Many bird owners also use bird harnesses when taking birds outdoors so that birds can experience fresh air safely without the risk of flying away.</p>
+
+        <h2>Creating a Safe Flying Environment</h2>
+
+        <p>If a bird is allowed to fly inside the home, it is important to make the environment safe.</p>
+
+        <p>Some simple safety steps include:</p>
+
+        <ul>
+          <li>closing windows and doors</li>
+          <li>covering mirrors or large glass surfaces</li>
+          <li>turning off ceiling fans</li>
+          <li>supervising birds during out-of-cage time</li>
+        </ul>
+
+        <p>These precautions allow birds to move safely while still enjoying the benefits of flight.</p>
+
+        <h2>Understanding Different Situations</h2>
+
+        <p>In some cases, wing clipping may still be recommended temporarily by an avian veterinarian for medical or safety reasons.</p>
+
+        <p>However, many bird owners today aim to allow their birds to keep their flight whenever possible.</p>
+
+        <p>Learning about the importance of flight helps owners understand that birds were designed to fly, and that flight plays a major role in their physical and emotional well-being.</p>
+
+        <h2>Respecting a Bird's Natural Abilities</h2>
+
+        <p>Birds are not decorative animals. They are intelligent, sensitive creatures with natural instincts and abilities.</p>
+
+        <p>Flight is one of the most important abilities birds have. Allowing birds to move, explore, and express their natural behaviors helps them live healthier and more fulfilling lives.</p>
+
+        <p>When possible, bird owners should consider alternatives that allow birds to remain active, stimulated, and free to use the abilities nature gave them.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-box">
+      <h2>Beyond the Cage</h2>
+      <p>Educating responsible bird ownership and promoting proper care for companion birds.</p>
+      <p><strong>Email:</strong> <a href="mailto:beyondthecage.contact@gmail.com">beyondthecage.contact@gmail.com</a></p>
+      <p><strong>If you have questions about bird care or suggestions for improving this website, feel free to reach out.</strong></p>
+      <p class="muted">The information on this website is for educational purposes only and is not a substitute for professional veterinary advice. Always consult an avian veterinarian for medical concerns regarding your bird.</p>
+    </div>
+          <p class="muted">© 2026 Beyond the Cage. All rights reserved.</p>
+
+  </div>
+</footer>
+</body>
+</html>

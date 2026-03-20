@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Common Mistakes - Beyond the Cage</title>
+<style>
+  :root {
+    --bg: #f7f3ee;
+    --paper: #fbf8f3;
+    --card: #ffffff;
+    --text: #2f3a35;
+    --muted: #6e776f;
+    --line: #e3ddd2;
+    --accent: #7ca08d;
+    --accent-2: #d4b96e;
+    --shadow: 0 12px 30px rgba(0,0,0,.06);
+    --radius: 22px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(251,248,243,.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 18px; padding: 14px 0;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 12px; font-size: 1.8rem; font-weight: 700;
+  }
+  .brand-mark {
+    width: 138px;
+    display: grid; place-items: center;
+  }
+  .brand-mark img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .menu {
+    display: flex; gap: 18px; flex-wrap: wrap; font-family: Arial, sans-serif; font-size: .95rem;
+  }
+  .menu a {
+    color: var(--text); text-decoration: none; padding-bottom: 3px; border-bottom: 2px solid transparent;
+  }
+  .menu a:hover { border-color: var(--accent); }
+  section { padding: 10px 0; }
+  h1, h2, h3 { line-height: 1.15; margin: 0 0 16px; }
+  h1 { font-size: clamp(2.4rem, 5vw, 4.1rem); font-style: oblique; }
+  h2 { font-size: clamp(2rem, 3vw, 3rem); }
+  h3 { font-size: 1.5rem; margin-top: 28px; }
+  p { margin: 0 0 14px; font-size: 1.07rem; }
+  .content-section { max-width: 850px; margin: 0 auto; }
+  .content-section h2 { color: var(--accent); margin-top: 48px; margin-bottom: 20px; }
+  .stripe:nth-of-type(4n+1) { background: #ffffff; }
+  .stripe:nth-of-type(4n+2) { background: linear-gradient(180deg, #ffffff 0%, #F5EDE3 100%); }
+  .stripe:nth-of-type(4n+3) { background: linear-gradient(180deg, #F5EDE3 0%, #ffffff 100%); }
+  .stripe:nth-of-type(4n+4) { background: #ffffff; }
+  .muted { color: var(--muted); padding-top: 40px; text-align: center; }
+   footer {
+    padding: 55px 0 25px; color: var(--muted);
+    background-image: url('images/home/footer_background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .footer-box {
+    padding: 32px; border-radius: 26px; background: rgba(255,255,255,.5);
+    border: 4px solid #f7f3ee; box-shadow: 0px -20px 30px rgba(0, 0, 0, .06); text-align: center;
+  }
+  .footer-box .muted:last-of-type {
+    margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.3);
+  }
+  footer > .wrap > .muted {
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand"><div class="brand-mark"><img src="images/home/logo.png" alt="Beyond the Cage Logo" /></div></div>
+    <nav class="menu">
+      <a href="beyond_the_cage_simple_website.html">Home</a>
+      <a href="beyond_the_cage_simple_website.html#bird-types">Bird Types</a>
+      <a href="nutrition.html">Nutrition</a>
+      <a href="enrichment.html">Enrichment</a>
+      <a href="wing_clipping.html">Wing Clipping</a>
+      <a href="cage_setup.html">Cage Setup</a>
+      <a href="common_mistakes.html">Common Mistakes</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="stripe">
+    <div class="wrap">
+      <div class="content-section">
+        <h1>Common Mistakes</h1>
+        <p>Many birds suffer not because their owners want to harm them, but because people often do not understand how much care birds really need.</p>
+        <p>Birds are intelligent, sensitive animals with physical and emotional needs. They are not simple pets that can be kept in a cage with food and ignored.</p>
+        <p>Many common bird care mistakes come from misinformation, poor planning, or treating birds like decorations instead of living companions.</p>
+        <p>Learning about these mistakes can help bird owners give their birds safer, healthier, and happier lives.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="stripe">
+    <div class="wrap">
+      <div class="content-section">
+        <h2>Treating Birds Like Easy Pets</h2>
+        <p>One of the biggest mistakes people make is assuming birds are easy pets.</p>
+        <p>Many people think a bird only needs:</p>
+        <ul>
+          <li>a cage</li>
+          <li>some seeds</li>
+          <li>water</li>
+        </ul>
+        <p>But birds need much more than that.</p>
+        <p>Birds require:</p>
+        <ul>
+          <li>proper nutrition</li>
+          <li>daily interaction</li>
+          <li>mental stimulation</li>
+          <li>toys and enrichment</li>
+          <li>time outside the cage</li>
+          <li>regular cleaning</li>
+          <li>veterinary care</li>
+        </ul>
+        <p>Birds are not low-maintenance pets. They need daily care and attention just like any other animal.</p>
+
+        <h2>Buying a Bird Without Research</h2>
+        <p>Another common mistake is buying a bird before learning about the species.</p>
+        <p>Different birds have very different needs. A budgie, a cockatoo, and a lorikeet cannot all be cared for in the same way.</p>
+        <p>Before getting a bird, people should understand:</p>
+        <ul>
+          <li>what the bird eats</li>
+          <li>how much space it needs</li>
+          <li>how loud it may be</li>
+          <li>how long it can live</li>
+          <li>how much attention it needs</li>
+          <li>whether it is suitable for their home</li>
+        </ul>
+        <p>Research is one of the most important parts of responsible bird ownership.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="stripe">
+    <div class="wrap">
+      <div class="content-section">
+        <h2>Feeding the Wrong Diet</h2>
+        <p>Poor nutrition is one of the most common mistakes bird owners make.</p>
+        <p>Many birds are still fed seed-only diets, even though seed-only diets are unhealthy for most companion birds.</p>
+        <p>Feeding the wrong diet can lead to problems such as:</p>
+        <ul>
+          <li>obesity</li>
+          <li>fatty liver disease</li>
+          <li>weak feathers</li>
+          <li>low energy</li>
+          <li>shorter lifespan</li>
+        </ul>
+        <p>Bird owners should understand what their specific bird species should eat and avoid giving unhealthy foods simply because the bird likes them.</p>
+
+        <h2>Using Plastic Food and Water Bowls</h2>
+        <p>Some owners use plastic bowls for food and water, but plastic is not the best choice.</p>
+        <p>Plastic bowls can scratch easily, and bacteria can build up inside these scratches over time.</p>
+        <p>It is safer to use stainless steel bowls because they are:</p>
+        <ul>
+          <li>easier to clean</li>
+          <li>more hygienic</li>
+          <li>less likely to hold bacteria</li>
+        </ul>
+        <p>Fresh water should always be available, and bowls should be cleaned daily.</p>
+
+        <h2>Keeping Birds in Small Cages</h2>
+        <p>Another major mistake is keeping birds in cages that are too small.</p>
+        <p>Birds need enough space to:</p>
+        <ul>
+          <li>stretch their wings</li>
+          <li>climb</li>
+          <li>move comfortably</li>
+          <li>interact with toys and perches</li>
+        </ul>
+        <p>A cage should not feel like a prison. It should be a safe and comfortable home.</p>
+        <p>Even smaller birds need room to move, and larger birds need even more space.</p>
+        <p>Whenever possible, the cage should be as large as possible for the species.</p>
+
+        <h2>Never Letting Birds Out of the Cage</h2>
+        <p>Many bird owners make the mistake of keeping birds inside the cage all day.</p>
+        <p>Even a large cage cannot replace the movement, exploration, and exercise birds need.</p>
+        <p>Birds should have safe daily opportunities to:</p>
+        <ul>
+          <li>come out of the cage</li>
+          <li>move around</li>
+          <li>explore</li>
+          <li>exercise</li>
+          <li>interact with their owners</li>
+        </ul>
+        <p>Birds that are always confined may become bored, frustrated, or stressed.</p>
+
+        <h2>Not Providing Enrichment</h2>
+        <p>Birds are intelligent animals, and boredom can cause serious problems.</p>
+        <p>A common mistake is giving birds only food and water but no toys, foraging activities, or mental stimulation.</p>
+        <p>Without enrichment, birds may develop behaviors such as:</p>
+        <ul>
+          <li>screaming</li>
+          <li>feather plucking</li>
+          <li>aggression</li>
+          <li>depression</li>
+        </ul>
+        <p>Birds need toys, climbing opportunities, foraging activities, and social interaction.</p>
+
+        <h2>Thinking Birds Are Cheap Pets</h2>
+        <p>Many people do not realize that birds can be expensive pets.</p>
+        <p>Some families buy birds for children without understanding the long-term cost and responsibility involved.</p>
+        <p>Birds need more than just a cage and food. They may also require:</p>
+        <ul>
+          <li>large cages</li>
+          <li>quality pellets and fresh foods</li>
+          <li>toys and perches</li>
+          <li>cleaning supplies</li>
+          <li>avian vet visits</li>
+          <li>emergency medical care</li>
+        </ul>
+        <p>Birds are not cheap pets. Responsible owners should be prepared for the time, care, and cost that comes with keeping a bird healthy.</p>
+
+        <h2>Giving Birds to Young Children Without Proper Supervision</h2>
+        <p>Sometimes birds are bought for very young children, but birds are delicate animals and should not be treated like toys.</p>
+        <p>Children may not yet understand:</p>
+        <ul>
+          <li>how fragile birds are</li>
+          <li>how to handle them gently</li>
+          <li>how much daily care birds need</li>
+        </ul>
+        <p>If a bird lives in a home with children, adults must still be the main responsible caretakers.</p>
+        <p>Bird ownership should never be treated like a quick gift or decoration for a child’s room.</p>
+
+        <h2>Forcing Interaction With a New Bird</h2>
+        <p>Birds are sensitive animals and may become frightened easily, especially in a new environment.</p>
+        <p>When a bird first arrives in a new home, everything around it is unfamiliar. The cage, the room, the sounds, and the people are all new. Because of this, birds may feel vulnerable and unsure about their surroundings.</p>
+        <p>A common mistake owners make is trying to handle the bird immediately by putting their hands directly inside the cage or chasing the bird around the cage. While the owner may be excited to interact with the bird, the bird may see the human hand as a predator.</p>
+        <p>Instead of forcing interaction, bird owners should allow the bird time to feel safe and comfortable.</p>
+        <p>Birds usually feel more secure when their cage is placed higher off the ground, because being elevated helps them feel less vulnerable. A cage placed very low can make birds feel exposed and unsafe.</p>
+        <p>Building trust with a bird takes patience.</p>
+        <p>One helpful way to build trust is by using millet as a reward. Millet is a treat that many birds enjoy and can be used to encourage the bird to approach you willingly.</p>
+        <p>Owners can slowly offer millet through the cage bars and allow the bird to approach at its own pace. Over time, the bird may become comfortable enough to step onto the owner’s hand.</p>
+        <p>It is important to let the bird come to you, rather than chasing or grabbing the bird.</p>
+        <p>Owners should also avoid touching the bird from behind or holding the bird against its will. This can scare the bird and damage the trust between the bird and its owner.</p>
+        <p>Remember that from the bird’s perspective, you are a stranger who suddenly appeared in its life. Trust must be built gradually.</p>
+        <p>Birds can become extremely stressed when they feel threatened. In severe cases, extreme fear can lead to serious health problems for birds.</p>
+        <p>Patience, calm behavior, and respect for the bird’s space will help create a positive relationship between the bird and its owner.</p>
+
+        <h2>Not Knowing the Bird’s Species</h2>
+        <p>It is very important to know what type of bird you have.</p>
+        <p>Different species need different diets, cage sizes, enrichment, and care routines.</p>
+        <p>For example:</p>
+        <ul>
+          <li>lorikeets need nectar-based diets</li>
+          <li>finches are different from parrots</li>
+          <li>large parrots need much more space and stimulation</li>
+        </ul>
+        <p>If an owner does not know the bird’s species, it becomes much harder to care for the bird properly.</p>
+
+        <h2>Not Knowing the Bird’s Gender</h2>
+        <p>Many owners do not know the gender of their bird, but this information can be important.</p>
+        <p>Some birds may behave differently depending on whether they are male or female.</p>
+        <p>Also, a female bird may lay an egg even if there is no male bird present.</p>
+        <p>This does not mean the bird is pregnant. It simply means the bird is female and is laying an egg.</p>
+        <p>Because of this, it can be useful to know the bird’s gender through proper testing such as DNA testing.</p>
+
+        <h2>Ignoring Signs of Stress or Illness</h2>
+        <p>Birds often hide signs of illness because in nature weak animals are more vulnerable.</p>
+        <p>This means that by the time a bird looks obviously sick, the problem may already be serious.</p>
+        <p>Common warning signs can include:</p>
+        <ul>
+          <li>changes in droppings</li>
+          <li>sitting puffed up for long periods</li>
+          <li>low energy</li>
+          <li>changes in appetite</li>
+          <li>unusual feather condition</li>
+          <li>breathing changes</li>
+        </ul>
+        <p>Bird owners should pay close attention to behavior and seek help from an avian vet when something seems wrong.</p>
+
+        <h2>Not Visiting an Avian Veterinarian</h2>
+        <p>A common mistake is assuming that any veterinarian can treat birds.</p>
+        <p>Birds should be seen by an avian veterinarian, because avian vets are trained specifically in bird health.</p>
+        <p>Regular checkups can help detect:</p>
+        <ul>
+          <li>nutrition problems</li>
+          <li>infections</li>
+          <li>weight issues</li>
+          <li>reproductive issues</li>
+          <li>other health concerns</li>
+        </ul>
+        <p>Preventive care is an important part of responsible bird ownership.</p>
+
+        <h2>Household Dangers Many Bird Owners Do Not Know About</h2>
+        <p>Many everyday household products can be dangerous for birds.</p>
+        <p>Birds have very sensitive respiratory systems, and certain fumes can be extremely toxic to them.</p>
+        <p>Examples of dangerous household items include:</p>
+        <ul>
+          <li>non-stick cookware (Teflon) when overheated</li>
+          <li>scented candles</li>
+          <li>air fresheners</li>
+          <li>strong cleaning chemicals</li>
+          <li>perfumes and sprays</li>
+        </ul>
+        <p>These fumes can be harmful or even fatal to birds. Bird owners should always make sure the air around their bird is safe and free from harmful fumes.</p>
+
+        <h2>Treating Birds Like Decorations</h2>
+        <p>Perhaps the biggest mistake of all is treating birds as decorations.</p>
+        <p>Birds are not ornaments for the home. They are living, intelligent companions with emotions, instincts, and needs.</p>
+        <p>When birds are bought only for their appearance, color, or singing, people often ignore the care and understanding they require.</p>
+        <p>Birds deserve more than a pretty cage and food bowl. They deserve respect, knowledge, and proper care.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-box">
+      <h2>Beyond the Cage</h2>
+      <p>Educating responsible bird ownership and promoting proper care for companion birds.</p>
+      <p><strong>Email:</strong> <a href="mailto:beyondthecage.contact@gmail.com">beyondthecage.contact@gmail.com</a></p>
+      <p><strong>If you have questions about bird care or suggestions for improving this website, feel free to reach out.</strong></p>
+      <p class="muted">The information on this website is for educational purposes only and is not a substitute for professional veterinary advice. Always consult an avian veterinarian for medical concerns regarding your bird.</p>
+    </div>
+          <p class="muted">© 2026 Beyond the Cage. All rights reserved.</p>
+
+  </div>
+</footer>
+</body>
+</html>
