@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cage Setup - Beyond the Cage</title>
+<style>
+  :root {
+    --bg: #f7f3ee;
+    --paper: #fbf8f3;
+    --card: #ffffff;
+    --text: #2f3a35;
+    --muted: #6e776f;
+    --line: #e3ddd2;
+    --accent: #7ca08d;
+    --accent-2: #d4b96e;
+    --shadow: 0 12px 30px rgba(0,0,0,.06);
+    --radius: 22px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(251,248,243,.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 18px; padding: 14px 0;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 12px; font-size: 1.8rem; font-weight: 700;
+  }
+  .brand-mark {
+    width: 138px;
+    display: grid; place-items: center;
+  }
+  .brand-mark img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .menu {
+    display: flex; gap: 18px; flex-wrap: wrap; font-family: Arial, sans-serif; font-size: .95rem;
+  }
+  .menu a {
+    color: var(--text); text-decoration: none; padding-bottom: 3px; border-bottom: 2px solid transparent;
+  }
+  .menu a:hover { border-color: var(--accent); }
+  .two-up { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: center; margin-bottom: 30px; }
+  .two-up img { width: 100%; border-radius: 18px; object-fit: cover; box-shadow: var(--shadow); border: 1px solid var(--line); }
+  @media (max-width: 900px) { .two-up { grid-template-columns: 1fr; align-items: start; } }
+  section { padding: 30px 0; }
+  h1, h2, h3 { line-height: 1.15; margin: 0 0 16px; }
+  h1 { font-size: clamp(2.4rem, 5vw, 4.1rem); font-style: oblique; }
+  h2 { font-size: clamp(2rem, 3vw, 3rem); }
+  h3 { font-size: 1.5rem; margin-top: 28px; }
+  p { margin: 0 0 14px; font-size: 1.07rem; }
+  .content-section { max-width: 850px; margin: 0 auto; }
+  .content-section h2 { color: var(--accent); margin-top: 48px; margin-bottom: 20px; }
+  .stripe:nth-of-type(4n+1) { background: #ffffff; }
+  .stripe:nth-of-type(4n+2) { background: linear-gradient(180deg, #ffffff 0%, #F5EDE3 100%); }
+  .stripe:nth-of-type(4n+3) { background: linear-gradient(180deg, #F5EDE3 0%, #ffffff 100%); }
+  .stripe:nth-of-type(4n+4) { background: #ffffff; }
+  .muted { color: var(--muted); padding-top: 40px; text-align: center; }
+  footer {
+    padding: 55px 0 25px; color: var(--muted);
+    background-image: url('images/home/footer_background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .footer-box {
+    padding: 32px; border-radius: 26px; background: rgba(255,255,255,.5);
+    border: 4px solid #f7f3ee; box-shadow: 0px -20px 30px rgba(0, 0, 0, .06); text-align: center;
+  }
+  .footer-box .muted:last-of-type {
+    margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.3);
+  }
+  footer > .wrap > .muted {
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand"><div class="brand-mark"><img src="images/home/logo.png" alt="Beyond the Cage Logo" /></div></div>
+    <nav class="menu">
+      <a href="beyond_the_cage_simple_website.html">Home</a>
+      <a href="beyond_the_cage_simple_website.html#bird-types">Bird Types</a>
+      <a href="nutrition.html">Nutrition</a>
+      <a href="enrichment.html">Enrichment</a>
+      <a href="wing_clipping.html">Wing Clipping</a>
+      <a href="cage_setup.html">Cage Setup</a>
+      <a href="common_mistakes.html">Common Mistakes</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="stripe">
+    <div class="wrap">
+      <div class="content-section">
+        <h1>Cage Setup</h1>
+        <p>A bird’s cage is one of the most important parts of their environment. While birds should spend time outside their cage every day, the cage still serves as their home, resting place, and safe space.</p>
+        <p>A properly set up cage helps birds stay active, comfortable, and mentally stimulated. A poorly designed cage, on the other hand, can lead to boredom, stress, and health problems.</p>
+        <p>The goal of a good cage setup is to create an environment that allows birds to move, climb, explore, and interact with their surroundings.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="stripe">
+    <div class="wrap">
+      <div class="content-section">
+        <div class="two-up">
+          <div>
+            <h2>Choosing the Right Cage Size</h2>
+            <p>One of the most important factors in bird care is cage size.</p>
+            <p>Birds need enough space to stretch their wings, climb, and move around comfortably. A cage that is too small can restrict movement and negatively affect both physical and mental health.</p>
+            <p>As a general rule, the cage should be as large as possible for the space available.</p>
+            <p>Even small birds like budgies and cockatiels benefit from larger cages such as flight cages, which allow them to move horizontally from perch to perch.</p>
+            <p>Remember that a cage is not meant to keep a bird trapped. It should provide enough space for movement while the bird is inside.</p>
+          </div>
+          <div>
+            <img src="images/home/cage_setup.png" alt="Example of a well-enriched bird cage setup" />
+            <p style="text-align:center; margin-top:8px; color:var(--muted);">Example of a well-enriched bird cage setup</p>
+          </div>
+        </div>
+
+        <h2>Avoid Round Cages</h2>
+        <p>Round cages are often sold because they look decorative, but they are not recommended for birds.</p>
+        <p>Round cages can make birds feel uncomfortable because they remove clear corners where birds naturally like to rest. They also limit how perches and toys can be placed.</p>
+        <p>Rectangular cages are usually better because they provide more usable space and allow birds to feel more secure.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="stripe">
+    <div class="wrap">
+      <div class="content-section">
+        <h2>Natural Perches</h2>
+        <p>Perches are where birds spend most of their time, so choosing the right type is important.</p>
+        <p>Natural wood perches are usually the best option because they provide different textures and sizes. This helps exercise the bird’s feet and prevents pressure sores that can develop when birds stand on the same smooth surface for long periods.</p>
+        <p>Using a variety of perch sizes and textures helps keep the bird comfortable and encourages movement around the cage.</p>
+        <p>Natural branch perches, like the one shown in the example cage, are especially beneficial.</p>
+
+        <h2>Toys and Mental Stimulation</h2>
+        <p>Birds are intelligent animals that need regular mental stimulation.</p>
+        <p>Providing toys inside the cage allows birds to chew, shred, explore, and interact with their environment.</p>
+        <ul>
+          <li>shredding toys made of paper or natural fibers</li>
+          <li>wooden chew toys</li>
+          <li>climbing ropes or ladders</li>
+          <li>puzzle toys</li>
+          <li>bells or hanging toys</li>
+        </ul>
+        <p>The cage shown in the example photo includes several types of enrichment toys that encourage birds to interact with their environment.</p>
+        <p>Toys should also be rotated regularly so that birds do not become bored with the same objects.</p>
+
+        <h2>Foraging Opportunities</h2>
+        <p>In the wild, birds spend a large part of their day searching for food.</p>
+        <p>Pet birds often receive their food in a bowl where it requires no effort to obtain. While convenient, this removes an important natural behavior.</p>
+        <p>Foraging toys help birds work for their food, which provides mental stimulation and prevents boredom.</p>
+        <p>Foraging toys may involve hiding food inside paper, baskets, toys, or small containers so birds must explore and interact to find their food.</p>
+        <p>The example cage includes several toys that allow birds to shred and explore, which encourages natural foraging behavior.</p>
+
+        <h2>Placement of Food and Water Bowls</h2>
+        <p>Food and water bowls should be placed in areas where they remain clean and easily accessible.</p>
+        <p>It is best to use stainless steel bowls, which are easier to clean and less likely to hold bacteria compared to plastic containers.</p>
+        <p>Bowls should be cleaned daily and fresh water should always be available.</p>
+        <p>Avoid placing bowls directly under perches where droppings may fall into the food or water.</p>
+
+        <h2>Cage Layout and Space</h2>
+        <p>A well-organized cage allows birds to move easily between perches, toys, and food bowls.</p>
+        <p>Perches should be placed at different heights so birds can climb and explore the cage naturally. Toys should not overcrowd the cage but should provide enough activity to keep the bird engaged.</p>
+        <p>The example cage shown includes:</p>
+        <ul>
+          <li>multiple perches</li>
+          <li>shredding toys</li>
+          <li>climbing structures</li>
+          <li>foraging toys</li>
+          <li>open space for movement</li>
+        </ul>
+        <p>This type of layout encourages birds to remain active and curious.</p>
+
+        <h2>Out-of-Cage Play Areas</h2>
+        <p>Many bird cages also include play areas on top of the cage.</p>
+        <p>Play stands and climbing structures allow birds to spend time outside their cage while still having a safe place to land and explore.</p>
+        <p>The play structure shown on top of the cage in the example photo provides additional enrichment and encourages birds to climb and interact with their environment.</p>
+
+        <h2>Cleanliness and Maintenance</h2>
+        <p>Keeping the cage clean is essential for a bird’s health.</p>
+        <p>Cage liners should be changed regularly, and food bowls, perches, and toys should be cleaned often to prevent bacteria buildup.</p>
+        <p>A clean cage helps prevent illness and keeps the environment comfortable for birds.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-box">
+      <h2>Beyond the Cage</h2>
+      <p>Educating responsible bird ownership and promoting proper care for companion birds.</p>
+      <p><strong>Email:</strong> <a href="mailto:beyondthecage.contact@gmail.com">beyondthecage.contact@gmail.com</a></p>
+      <p><strong>If you have questions about bird care or suggestions for improving this website, feel free to reach out.</strong></p>
+      <p class="muted">The information on this website is for educational purposes only and is not a substitute for professional veterinary advice. Always consult an avian veterinarian for medical concerns regarding your bird.</p>
+    </div>
+          <p class="muted">© 2026 Beyond the Cage. All rights reserved.</p>
+
+  </div>
+</footer>
+</body>
+</html>
