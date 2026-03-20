@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -89,15 +89,26 @@
   footer > .wrap > .muted {
     text-align: center;
   }
+  .menu-toggle { display: none; background: rgba(255,255,255,0.8); border: 1px solid rgba(47,58,53,.35); color: var(--text); font-size: 1rem; padding: 8px 12px; border-radius: 10px; cursor: pointer; margin-left: auto; }
+  .menu { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  @media (max-width: 860px) {
+    .menu-toggle { display: block; }
+    .menu { display: none; flex-direction: column; width: 100%; margin-top: 10px; background: rgba(255,255,255,0.96); border-top: 1px solid var(--line); padding: 12px 16px; position: absolute; top: 70px; left: 0; right: 0; z-index: 55; }
+    .menu.open { display: flex; }
+    .menu a { width: 100%; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.08); }
+    .menu a:last-child { border-bottom: none; }
+    .nav { position: relative; }
+  }
 </style>
 </head>
 <body>
 <header>
   <div class="wrap nav">
     <div class="brand"><div class="brand-mark"><img src="images/home/logo.png" alt="Beyond the Cage Logo" /></div></div>
+    <button class="menu-toggle" aria-label="Toggle navigation menu">☰ Menu</button>
     <nav class="menu">
-      <a href="beyond_the_cage_simple_website.html">Home</a>
-      <a href="beyond_the_cage_simple_website.html#bird-types">Bird Types</a>
+      <a href="index.html">Home</a>
+      <a href="index.html#bird-types">Bird Types</a>
       <a href="nutrition.html">Nutrition</a>
       <a href="enrichment.html">Enrichment</a>
       <a href="wing_clipping.html">Wing Clipping</a>
@@ -113,7 +124,7 @@
     <div class="wrap">
       <div class="content-section">
         <h1>Cage Setup</h1>
-        <p>A bird’s cage is one of the most important parts of their environment. While birds should spend time outside their cage every day, the cage still serves as their home, resting place, and safe space.</p>
+        <p>A birdâ€™s cage is one of the most important parts of their environment. While birds should spend time outside their cage every day, the cage still serves as their home, resting place, and safe space.</p>
         <p>A properly set up cage helps birds stay active, comfortable, and mentally stimulated. A poorly designed cage, on the other hand, can lead to boredom, stress, and health problems.</p>
         <p>The goal of a good cage setup is to create an environment that allows birds to move, climb, explore, and interact with their surroundings.</p>
       </div>
@@ -151,7 +162,7 @@
       <div class="content-section">
         <h2>Natural Perches</h2>
         <p>Perches are where birds spend most of their time, so choosing the right type is important.</p>
-        <p>Natural wood perches are usually the best option because they provide different textures and sizes. This helps exercise the bird’s feet and prevents pressure sores that can develop when birds stand on the same smooth surface for long periods.</p>
+        <p>Natural wood perches are usually the best option because they provide different textures and sizes. This helps exercise the birdâ€™s feet and prevents pressure sores that can develop when birds stand on the same smooth surface for long periods.</p>
         <p>Using a variety of perch sizes and textures helps keep the bird comfortable and encourages movement around the cage.</p>
         <p>Natural branch perches, like the one shown in the example cage, are especially beneficial.</p>
 
@@ -200,7 +211,7 @@
         <p>The play structure shown on top of the cage in the example photo provides additional enrichment and encourages birds to climb and interact with their environment.</p>
 
         <h2>Cleanliness and Maintenance</h2>
-        <p>Keeping the cage clean is essential for a bird’s health.</p>
+        <p>Keeping the cage clean is essential for a birdâ€™s health.</p>
         <p>Cage liners should be changed regularly, and food bowls, perches, and toys should be cleaned often to prevent bacteria buildup.</p>
         <p>A clean cage helps prevent illness and keeps the environment comfortable for birds.</p>
       </div>
@@ -217,9 +228,16 @@
       <p><strong>If you have questions about bird care or suggestions for improving this website, feel free to reach out.</strong></p>
       <p class="muted">The information on this website is for educational purposes only and is not a substitute for professional veterinary advice. Always consult an avian veterinarian for medical concerns regarding your bird.</p>
     </div>
-          <p class="muted">© 2026 Beyond the Cage. All rights reserved.</p>
+          <p class="muted">Â© 2026 Beyond the Cage. All rights reserved.</p>
 
   </div>
 </footer>
-</body>
+<script>const menuToggle=document.querySelector(".menu-toggle"); const navMenu=document.querySelector(".menu"); if(menuToggle && navMenu){ menuToggle.addEventListener("click",()=>navMenu.classList.toggle("open")); window.addEventListener("resize",()=>{ if(window.innerWidth>860){ navMenu.classList.remove("open"); }});} </script></body>
 </html>
+
+
+
+
+
+
+

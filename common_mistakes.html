@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -86,15 +86,26 @@
   footer > .wrap > .muted {
     text-align: center;
   }
+  .menu-toggle { display: none; background: rgba(255,255,255,0.8); border: 1px solid rgba(47,58,53,.35); color: var(--text); font-size: 1rem; padding: 8px 12px; border-radius: 10px; cursor: pointer; margin-left: auto; }
+  .menu { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  @media (max-width: 860px) {
+    .menu-toggle { display: block; }
+    .menu { display: none; flex-direction: column; width: 100%; margin-top: 10px; background: rgba(255,255,255,0.96); border-top: 1px solid var(--line); padding: 12px 16px; position: absolute; top: 70px; left: 0; right: 0; z-index: 55; }
+    .menu.open { display: flex; }
+    .menu a { width: 100%; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.08); }
+    .menu a:last-child { border-bottom: none; }
+    .nav { position: relative; }
+  }
 </style>
 </head>
 <body>
 <header>
   <div class="wrap nav">
     <div class="brand"><div class="brand-mark"><img src="images/home/logo.png" alt="Beyond the Cage Logo" /></div></div>
+    <button class="menu-toggle" aria-label="Toggle navigation menu">☰ Menu</button>
     <nav class="menu">
-      <a href="beyond_the_cage_simple_website.html">Home</a>
-      <a href="beyond_the_cage_simple_website.html#bird-types">Bird Types</a>
+      <a href="index.html">Home</a>
+      <a href="index.html#bird-types">Bird Types</a>
       <a href="nutrition.html">Nutrition</a>
       <a href="enrichment.html">Enrichment</a>
       <a href="wing_clipping.html">Wing Clipping</a>
@@ -247,7 +258,7 @@
           <li>how much daily care birds need</li>
         </ul>
         <p>If a bird lives in a home with children, adults must still be the main responsible caretakers.</p>
-        <p>Bird ownership should never be treated like a quick gift or decoration for a child’s room.</p>
+        <p>Bird ownership should never be treated like a quick gift or decoration for a childâ€™s room.</p>
 
         <h2>Forcing Interaction With a New Bird</h2>
         <p>Birds are sensitive animals and may become frightened easily, especially in a new environment.</p>
@@ -257,14 +268,14 @@
         <p>Birds usually feel more secure when their cage is placed higher off the ground, because being elevated helps them feel less vulnerable. A cage placed very low can make birds feel exposed and unsafe.</p>
         <p>Building trust with a bird takes patience.</p>
         <p>One helpful way to build trust is by using millet as a reward. Millet is a treat that many birds enjoy and can be used to encourage the bird to approach you willingly.</p>
-        <p>Owners can slowly offer millet through the cage bars and allow the bird to approach at its own pace. Over time, the bird may become comfortable enough to step onto the owner’s hand.</p>
+        <p>Owners can slowly offer millet through the cage bars and allow the bird to approach at its own pace. Over time, the bird may become comfortable enough to step onto the ownerâ€™s hand.</p>
         <p>It is important to let the bird come to you, rather than chasing or grabbing the bird.</p>
         <p>Owners should also avoid touching the bird from behind or holding the bird against its will. This can scare the bird and damage the trust between the bird and its owner.</p>
-        <p>Remember that from the bird’s perspective, you are a stranger who suddenly appeared in its life. Trust must be built gradually.</p>
+        <p>Remember that from the birdâ€™s perspective, you are a stranger who suddenly appeared in its life. Trust must be built gradually.</p>
         <p>Birds can become extremely stressed when they feel threatened. In severe cases, extreme fear can lead to serious health problems for birds.</p>
-        <p>Patience, calm behavior, and respect for the bird’s space will help create a positive relationship between the bird and its owner.</p>
+        <p>Patience, calm behavior, and respect for the birdâ€™s space will help create a positive relationship between the bird and its owner.</p>
 
-        <h2>Not Knowing the Bird’s Species</h2>
+        <h2>Not Knowing the Birdâ€™s Species</h2>
         <p>It is very important to know what type of bird you have.</p>
         <p>Different species need different diets, cage sizes, enrichment, and care routines.</p>
         <p>For example:</p>
@@ -273,14 +284,14 @@
           <li>finches are different from parrots</li>
           <li>large parrots need much more space and stimulation</li>
         </ul>
-        <p>If an owner does not know the bird’s species, it becomes much harder to care for the bird properly.</p>
+        <p>If an owner does not know the birdâ€™s species, it becomes much harder to care for the bird properly.</p>
 
-        <h2>Not Knowing the Bird’s Gender</h2>
+        <h2>Not Knowing the Birdâ€™s Gender</h2>
         <p>Many owners do not know the gender of their bird, but this information can be important.</p>
         <p>Some birds may behave differently depending on whether they are male or female.</p>
         <p>Also, a female bird may lay an egg even if there is no male bird present.</p>
         <p>This does not mean the bird is pregnant. It simply means the bird is female and is laying an egg.</p>
-        <p>Because of this, it can be useful to know the bird’s gender through proper testing such as DNA testing.</p>
+        <p>Because of this, it can be useful to know the birdâ€™s gender through proper testing such as DNA testing.</p>
 
         <h2>Ignoring Signs of Stress or Illness</h2>
         <p>Birds often hide signs of illness because in nature weak animals are more vulnerable.</p>
@@ -341,9 +352,16 @@
       <p><strong>If you have questions about bird care or suggestions for improving this website, feel free to reach out.</strong></p>
       <p class="muted">The information on this website is for educational purposes only and is not a substitute for professional veterinary advice. Always consult an avian veterinarian for medical concerns regarding your bird.</p>
     </div>
-          <p class="muted">© 2026 Beyond the Cage. All rights reserved.</p>
+          <p class="muted">Â© 2026 Beyond the Cage. All rights reserved.</p>
 
   </div>
 </footer>
-</body>
+<script>const menuToggle=document.querySelector(".menu-toggle"); const navMenu=document.querySelector(".menu"); if(menuToggle && navMenu){ menuToggle.addEventListener("click",()=>navMenu.classList.toggle("open")); window.addEventListener("resize",()=>{ if(window.innerWidth>860){ navMenu.classList.remove("open"); }});} </script></body>
 </html>
+
+
+
+
+
+
+

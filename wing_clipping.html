@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -112,7 +112,16 @@
   footer > .wrap > .muted {
     text-align: center;
   }
-</style>
+  .menu-toggle { display: none; background: rgba(255,255,255,0.8); border: 1px solid rgba(47,58,53,.35); color: var(--text); font-size: 1rem; padding: 8px 12px; border-radius: 10px; cursor: pointer; margin-left: auto; }
+  .menu { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  @media (max-width: 860px) {
+    .menu-toggle { display: block; }
+    .menu { display: none; flex-direction: column; width: 100%; margin-top: 10px; background: rgba(255,255,255,0.96); border-top: 1px solid var(--line); padding: 12px 16px; position: absolute; top: 70px; left: 0; right: 0; z-index: 1000; }
+    .menu.open { display: flex; }
+    .menu a { width: 100%; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.08); }
+    .menu a:last-child { border-bottom: none; }
+    .nav { position: relative; }
+  }</style>
 </head>
 <body>
 <header>
@@ -122,9 +131,10 @@
         <img src="images/home/logo.png" alt="Beyond the Cage Logo" />
       </div>
     </div>
+    <button class="menu-toggle" aria-label="Toggle navigation menu">☰ Menu</button>
     <nav class="menu">
-      <a href="beyond_the_cage_simple_website.html">Home</a>
-      <a href="beyond_the_cage_simple_website.html#bird-types">Bird Types</a>
+      <a href="index.html">Home</a>
+      <a href="index.html#bird-types">Bird Types</a>
       <a href="nutrition.html">Nutrition</a>
       <a href="enrichment.html">Enrichment</a>
       <a href="wing_clipping.html">Wing Clipping</a>
@@ -251,9 +261,22 @@
       <p><strong>If you have questions about bird care or suggestions for improving this website, feel free to reach out.</strong></p>
       <p class="muted">The information on this website is for educational purposes only and is not a substitute for professional veterinary advice. Always consult an avian veterinarian for medical concerns regarding your bird.</p>
     </div>
-          <p class="muted">© 2026 Beyond the Cage. All rights reserved.</p>
+          <p class="muted">Â© 2026 Beyond the Cage. All rights reserved.</p>
 
   </div>
 </footer>
-</body>
+<script>
+const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector(".menu");
+if (menuToggle && navMenu) {
+  menuToggle.addEventListener("click", () => navMenu.classList.toggle("open"));
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 860) {
+      navMenu.classList.remove("open");
+    }
+  });
+}
+</script></body>
 </html>
+
+
